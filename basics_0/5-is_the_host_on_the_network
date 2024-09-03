@@ -1,10 +1,8 @@
-#!/bin/bash
-
-# Vérifier si un argument est passé
+#!/usr/bin/env bash
+# Task: 5. Is the host on the network
 if [ -z "$1" ]; then
-  echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
-  exit 1
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+    exit 1
 fi
-
-# Lancer 5 pings sur l'adresse IP passée en argument
-ping -c 5 "$1"
+IP_ADDRESS=$1
+ping -c 5 "$IP_ADDRESS"
